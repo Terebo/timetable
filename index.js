@@ -11,7 +11,6 @@ function getTimes() {
 		console.log(typeof(time0));
 		time = time + parseInt(timezoneselect.value, 10);
 		console.log(time);
-		temp = time + 2;
 		var tempadditive = " AM";
 		if (time > 12 && time < 24) {
 			time = time - 12;
@@ -19,6 +18,11 @@ function getTimes() {
 		if (time >= 24) {
 			time = time - 24;
 		}
+		if (time < 0) {
+			time = time + 24;
+		}
+		
+		temp = time + 2;
 		if (temp > 12 && temp < 24) {
 			temp = temp - 12;
 			tempadditive = " PM";
