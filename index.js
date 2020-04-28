@@ -10,6 +10,12 @@ function getTimes() {
 		console.log(time);
 		temp = time + 2;
 		var tempadditive = " AM";
+		if (time > 12) {
+			time = time - 12;
+		}
+		if (time >= 24) {
+			time = time - 24;
+		}
 		if (temp > 12) {
 			temp = temp - 12;
 			tempadditive = " PM";
